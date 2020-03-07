@@ -1,0 +1,9 @@
+D:\Pemograman Visual\AplikasiPertama\bin\Debug\AplikasiPertama.exe.config
+D:\Pemograman Visual\AplikasiPertama\bin\Debug\AplikasiPertama.exe
+D:\Pemograman Visual\AplikasiPertama\bin\Debug\AplikasiPertama.pdb
+D:\Pemograman Visual\AplikasiPertama\obj\Debug\AplikasiPertama.csprojAssemblyReference.cache
+D:\Pemograman Visual\AplikasiPertama\obj\Debug\AplikasiPertama.Properties.Resources.resources
+D:\Pemograman Visual\AplikasiPertama\obj\Debug\AplikasiPertama.csproj.GenerateResource.cache
+D:\Pemograman Visual\AplikasiPertama\obj\Debug\AplikasiPertama.exe
+D:\Pemograman Visual\AplikasiPertama\obj\Debug\AplikasiPertama.pdb
+D:\Pemograman Visual\AplikasiPertama\obj\Debug\AplikasiPertama.Form1.resources

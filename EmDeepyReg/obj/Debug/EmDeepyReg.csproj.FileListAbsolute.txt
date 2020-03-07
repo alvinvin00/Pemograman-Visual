@@ -1,0 +1,9 @@
+D:\Pemograman Visual\EmDeepyReg\bin\Debug\EmDeepyReg.exe.config
+D:\Pemograman Visual\EmDeepyReg\bin\Debug\EmDeepyReg.exe
+D:\Pemograman Visual\EmDeepyReg\bin\Debug\EmDeepyReg.pdb
+D:\Pemograman Visual\EmDeepyReg\obj\Debug\EmDeepyReg.csprojAssemblyReference.cache
+D:\Pemograman Visual\EmDeepyReg\obj\Debug\EmDeepyReg.Form1.resources
+D:\Pemograman Visual\EmDeepyReg\obj\Debug\EmDeepyReg.Properties.Resources.resources
+D:\Pemograman Visual\EmDeepyReg\obj\Debug\EmDeepyReg.csproj.GenerateResource.cache
+D:\Pemograman Visual\EmDeepyReg\obj\Debug\EmDeepyReg.exe
+D:\Pemograman Visual\EmDeepyReg\obj\Debug\EmDeepyReg.pdb

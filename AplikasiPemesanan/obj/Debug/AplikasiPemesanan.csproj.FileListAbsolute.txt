@@ -1,0 +1,9 @@
+D:\Pemograman Visual\AplikasiPemesanan\bin\Debug\AplikasiPemesanan.exe.config
+D:\Pemograman Visual\AplikasiPemesanan\bin\Debug\AplikasiPemesanan.exe
+D:\Pemograman Visual\AplikasiPemesanan\bin\Debug\AplikasiPemesanan.pdb
+D:\Pemograman Visual\AplikasiPemesanan\obj\Debug\AplikasiPemesanan.csprojAssemblyReference.cache
+D:\Pemograman Visual\AplikasiPemesanan\obj\Debug\AplikasiPemesanan.Properties.Resources.resources
+D:\Pemograman Visual\AplikasiPemesanan\obj\Debug\AplikasiPemesanan.csproj.GenerateResource.cache
+D:\Pemograman Visual\AplikasiPemesanan\obj\Debug\AplikasiPemesanan.exe
+D:\Pemograman Visual\AplikasiPemesanan\obj\Debug\AplikasiPemesanan.pdb
+D:\Pemograman Visual\AplikasiPemesanan\obj\Debug\AplikasiPemesanan.FormMenuUtama.resources

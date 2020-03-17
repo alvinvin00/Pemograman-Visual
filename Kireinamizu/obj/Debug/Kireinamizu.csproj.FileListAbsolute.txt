@@ -1,0 +1,9 @@
+D:\Pemograman Visual\Kireinamizu\bin\Debug\Kireinamizu.exe.config
+D:\Pemograman Visual\Kireinamizu\bin\Debug\Kireinamizu.exe
+D:\Pemograman Visual\Kireinamizu\bin\Debug\Kireinamizu.pdb
+D:\Pemograman Visual\Kireinamizu\obj\Debug\Kireinamizu.csprojAssemblyReference.cache
+D:\Pemograman Visual\Kireinamizu\obj\Debug\Kireinamizu.Form1.resources
+D:\Pemograman Visual\Kireinamizu\obj\Debug\Kireinamizu.Properties.Resources.resources
+D:\Pemograman Visual\Kireinamizu\obj\Debug\Kireinamizu.csproj.GenerateResource.cache
+D:\Pemograman Visual\Kireinamizu\obj\Debug\Kireinamizu.exe
+D:\Pemograman Visual\Kireinamizu\obj\Debug\Kireinamizu.pdb

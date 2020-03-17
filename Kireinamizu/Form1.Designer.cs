@@ -26,8 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblRek = new System.Windows.Forms.Label();
             this.lblNama = new System.Windows.Forms.Label();
@@ -55,15 +54,20 @@
             this.txtKembali = new System.Windows.Forms.TextBox();
             this.txtBayar = new System.Windows.Forms.TextBox();
             this.btnClear = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAir)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Chartreuse;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 111);
+            this.panel1.Size = new System.Drawing.Size(498, 111);
             this.panel1.TabIndex = 0;
             // 
             // lblRek
@@ -196,7 +200,6 @@
             this.numAir.Size = new System.Drawing.Size(36, 20);
             this.numAir.TabIndex = 3;
             this.numAir.ValueChanged += new System.EventHandler(this.numAir_ValueChanged);
-            this.numAir.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numAir_KeyPress);
             // 
             // txtBeban
             // 
@@ -245,7 +248,7 @@
             this.txtTotal.Enabled = false;
             this.txtTotal.Location = new System.Drawing.Point(382, 127);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtTotal.Size = new System.Drawing.Size(100, 20);
             this.txtTotal.TabIndex = 22;
             // 
@@ -264,8 +267,8 @@
             this.dtBayar.Name = "dtBayar";
             this.dtBayar.Size = new System.Drawing.Size(160, 20);
             this.dtBayar.TabIndex = 4;
+            this.dtBayar.Value = new System.DateTime(2020, 3, 15, 19, 21, 8, 0);
             this.dtBayar.ValueChanged += new System.EventHandler(this.dtBayar_ValueChanged);
-            this.dtBayar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtBayar_KeyPress);
             // 
             // txtKembali
             // 
@@ -281,6 +284,8 @@
             this.txtBayar.Name = "txtBayar";
             this.txtBayar.Size = new System.Drawing.Size(100, 20);
             this.txtBayar.TabIndex = 5;
+            this.txtBayar.TextChanged += new System.EventHandler(this.txtBayar_TextChanged);
+            this.txtBayar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBayar_KeyPress);
             // 
             // btnClear
             // 
@@ -291,6 +296,26 @@
             this.btnClear.Text = "&CLEAR";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cascadia Code", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(22, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(460, 26);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Aplikasi Pembayaran Rekening Air";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Cascadia Code", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label3.Location = new System.Drawing.Point(154, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(194, 26);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "\"Kireinamizu\"";
             // 
             // Form1
             // 
@@ -324,9 +349,12 @@
             this.Controls.Add(this.lblNama);
             this.Controls.Add(this.lblRek);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Menu Pembayaran";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAir)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -362,6 +390,8 @@
         private System.Windows.Forms.TextBox txtKembali;
         private System.Windows.Forms.TextBox txtBayar;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 

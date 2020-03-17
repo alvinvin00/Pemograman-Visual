@@ -1,6 +1,6 @@
 ﻿namespace EmDeepyReg
 {
-    partial class Form1
+    partial class EmDeppy
     {
         /// <summary>
         /// Required designer variable.
@@ -26,8 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -86,7 +85,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cascadia Code", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.label2.Location = new System.Drawing.Point(258, 57);
+            this.label2.Location = new System.Drawing.Point(246, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(194, 26);
             this.label2.TabIndex = 1;
@@ -97,11 +96,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Lime;
-            this.label1.Location = new System.Drawing.Point(78, 11);
+            this.label1.Location = new System.Drawing.Point(59, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(519, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Pendaftaran Mahasiswa baru EmDeppy";
+            this.label1.Text = "Pendaftaran Mahasiswa Baru EmDeppy";
             // 
             // gbDaftar
             // 
@@ -408,7 +407,7 @@
             this.btnDaftar.UseVisualStyleBackColor = true;
             this.btnDaftar.Click += new System.EventHandler(this.btnDaftar_Click);
             // 
-            // Form1
+            // EmDeppy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -417,8 +416,8 @@
             this.Controls.Add(this.gbHasil);
             this.Controls.Add(this.gbDaftar);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "EmDeppy";
+            this.Text = "EmDeppy";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

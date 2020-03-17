@@ -1,17 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace Kireinamizu
 {
     public partial class Form1 : Form
     {
+        private long denda;
+        private long beban;
+        private long bayar;
+        private long total;
+        private long harga;
+        private long kembali;
+        private long totalBayar;
+        private long jumlahAir;
+
         public Form1()
         {
             InitializeComponent();
@@ -29,27 +32,39 @@ namespace Kireinamizu
             txtNoRek.MaxLength = 8;
 
             txtNama.Clear();
-            txtBayar.Text = "0";
 
-            txtBeban.Text = "0";
+
+            txtBeban.Text = 0.ToString("C");
             txtBeban.Enabled = false;
 
-            txtDenda.Text = "0";
+            txtDenda.Text = 0.ToString("C");
 
             txtGolongan.Clear();
             txtGolongan.Enabled = false;
 
-            txtHarga.Text = "0";
+            txtHarga.Text = 0.ToString("C");
 
             dtBayar.Value = DateTime.Now;
 
             numAir.Value = 0;
+            numAir.Minimum = 0;
 
-            txtKembali.Text = "0";
+            txtKembali.Text = 0.ToString("C");
 
-            txtTotal.Text = "0";
+            txtTotal.Text = 0.ToString("C");
 
-            txtTotalBayar.Text = "0";
+            txtTotalBayar.Text = 0.ToString("C");
+
+            txtBayar.Clear();
+
+            denda = 0;
+            beban = 0;
+            bayar = 0;
+            total = 0;
+            harga = 0;
+            kembali = 0;
+            totalBayar = 0;
+            jumlahAir = 0;
         }
 
 
@@ -61,7 +76,6 @@ namespace Kireinamizu
         private void txtNoRek_TextChanged(object sender, EventArgs e)
         {
             String noRek = txtNoRek.Text;
-            Console.WriteLine($"Nama : {noRek}");
 
             if (noRek.Length >= 3)
             {
@@ -69,30 +83,33 @@ namespace Kireinamizu
                 {
                     case "PAB":
                         txtGolongan.Text = "Pelanggan Pabrik";
-                        txtBeban.Text = "48000";
-                        txtHarga.Text = "1725";
+                        beban = 48000;
+                        harga = 1725;
                         break;
                     case "SUP":
                         txtGolongan.Text = "Pelanggan Supermarket";
-                        txtBeban.Text = "32500";
-                        txtHarga.Text = "1250";
+                        beban = 32500;
+                        harga = 1250;
                         break;
                     case "TOK":
                         txtGolongan.Text = "Pelanggan Toko";
-                        txtBeban.Text = "27000";
-                        txtHarga.Text = "800";
+                        beban = 27000;
+                        harga = 800;
                         break;
                     case "BIA":
                         txtGolongan.Text = "Pelanggan Biasa";
-                        txtBeban.Text = "22500";
-                        txtHarga.Text = "575";
+                        beban = 22500;
+                        harga = 575;
                         break;
                     default:
                         txtGolongan.Text = "Tidak Terdefinisi";
-                        txtBeban.Text = "0";
-                        txtHarga.Text = "0";
+                        beban = 0;
+                        harga = 0;
                         break;
                 }
+
+                txtBeban.Text = beban.ToString("C");
+                txtHarga.Text = harga.ToString("C");
             }
         }
 
@@ -118,37 +135,54 @@ namespace Kireinamizu
 
         private void dtBayar_ValueChanged(object sender, EventArgs e)
         {
-            double total = double.Parse(txtTotal.Text);
-            double denda;
-
             if (dtBayar.Value.Day > 15)
             {
-                denda = (0.1 * total);
-            }
-            else
-            {
-                denda = 0;
+                denda = (long) (0.1 * total);
             }
 
-            double totalBayar = (total + denda);
+            totalBayar = (total + denda);
 
-            txtDenda.Text = denda.ToString();
-            txtTotalBayar.Text = totalBayar.ToString();
+            txtDenda.Text = denda.ToString("C");
+            txtTotalBayar.Text = totalBayar.ToString("C");
         }
 
         private void numAir_ValueChanged(object sender, EventArgs e)
         {
-            int harga = int.Parse(txtHarga.Text);
-            int beban = int.Parse(txtBeban.Text);
+            jumlahAir = (long) numAir.Value;
 
-            txtTotal.Text = (harga * numAir.Value + beban).ToString();
+            total = harga * jumlahAir + beban;
+            txtTotal.Text = total.ToString("C");
         }
 
-        private void numAir_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtBayar_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            if (e.KeyChar == (char) Keys.Enter)
+            {
+                if (long.TryParse(txtBayar.Text, NumberStyles.Currency, CultureInfo.CurrentCulture, out bayar))
+                {
+                    if (bayar > totalBayar)
+                    {
+                        kembali = bayar - totalBayar;
+                        txtKembali.Text = kembali.ToString("C");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Uang Kurang", "Perhatian", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Input invalid", "Perhatian", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
-        private void dtBayar_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtBayar_TextChanged(object sender, EventArgs e)
         {
         }
     }

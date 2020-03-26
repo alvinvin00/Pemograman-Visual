@@ -1,0 +1,9 @@
+D:\Pemograman Visual\Kawal Corona\bin\Debug\Kawal Corona.exe.config
+D:\Pemograman Visual\Kawal Corona\bin\Debug\Kawal Corona.exe
+D:\Pemograman Visual\Kawal Corona\bin\Debug\Kawal Corona.pdb
+D:\Pemograman Visual\Kawal Corona\obj\Debug\Kawal Corona.csprojAssemblyReference.cache
+D:\Pemograman Visual\Kawal Corona\obj\Debug\Kawal_Corona.FrmMenuUtama.resources
+D:\Pemograman Visual\Kawal Corona\obj\Debug\Kawal_Corona.Properties.Resources.resources
+D:\Pemograman Visual\Kawal Corona\obj\Debug\Kawal Corona.csproj.GenerateResource.cache
+D:\Pemograman Visual\Kawal Corona\obj\Debug\Kawal Corona.exe
+D:\Pemograman Visual\Kawal Corona\obj\Debug\Kawal Corona.pdb

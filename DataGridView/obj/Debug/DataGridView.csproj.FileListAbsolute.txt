@@ -1,0 +1,9 @@
+D:\Pemograman Visual\DataGridView\bin\Debug\DataGridView.exe.config
+D:\Pemograman Visual\DataGridView\bin\Debug\DataGridView.exe
+D:\Pemograman Visual\DataGridView\bin\Debug\DataGridView.pdb
+D:\Pemograman Visual\DataGridView\obj\Debug\DataGridView.csprojAssemblyReference.cache
+D:\Pemograman Visual\DataGridView\obj\Debug\DataGridView.Properties.Resources.resources
+D:\Pemograman Visual\DataGridView\obj\Debug\DataGridView.csproj.GenerateResource.cache
+D:\Pemograman Visual\DataGridView\obj\Debug\DataGridView.exe
+D:\Pemograman Visual\DataGridView\obj\Debug\DataGridView.pdb
+D:\Pemograman Visual\DataGridView\obj\Debug\DataGridView.Form1.resources

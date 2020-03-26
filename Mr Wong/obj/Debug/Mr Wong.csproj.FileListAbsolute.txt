@@ -1,0 +1,9 @@
+D:\Pemograman Visual\Mr Wong\bin\Debug\Mr Wong.exe.config
+D:\Pemograman Visual\Mr Wong\bin\Debug\Mr Wong.exe
+D:\Pemograman Visual\Mr Wong\bin\Debug\Mr Wong.pdb
+D:\Pemograman Visual\Mr Wong\obj\Debug\Mr Wong.csprojAssemblyReference.cache
+D:\Pemograman Visual\Mr Wong\obj\Debug\Mr_Wong.Form1.resources
+D:\Pemograman Visual\Mr Wong\obj\Debug\Mr_Wong.Properties.Resources.resources
+D:\Pemograman Visual\Mr Wong\obj\Debug\Mr Wong.csproj.GenerateResource.cache
+D:\Pemograman Visual\Mr Wong\obj\Debug\Mr Wong.exe
+D:\Pemograman Visual\Mr Wong\obj\Debug\Mr Wong.pdb

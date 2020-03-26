@@ -190,11 +190,18 @@ namespace Mr_Wong
             }
 
             txtHarga.Text = _harga.ToString();
+            CalculatePrice();
+        }
+
+        private void CalculatePrice()
+        {
+            _total = (long) (_harga * numJumlah.Value);
+            txtHarga.Text = _total.ToString();
         }
 
         private void numJumlah_ValueChanged(object sender, EventArgs e)
         {
-            _total = (long) (_harga * numJumlah.Value);
+            CalculatePrice();
         }
 
         private void btnTambah_Click(object sender, EventArgs e)
@@ -219,39 +226,57 @@ namespace Mr_Wong
 
                 if (result == DialogResult.Yes)
                 {
-                    dgvPesanan.Rows[position].Cells[3].Value = numJumlah.Value.ToString();
-                    dgvPesanan.Rows[position].Cells[5].Value = _total.ToString();
+                    editItem(position);
                 }
             }
             else
             {
-                int pos = dgvPesanan.Rows.Count;
-
-                dgvPesanan.Rows.Add();
-                dgvPesanan.Rows[pos].Cells[0].Value = pos + 1;
-                dgvPesanan.Rows[pos].Cells[1].Value = cbPilihan.Text;
-                dgvPesanan.Rows[pos].Cells[2].Value = cbJenis.Text;
-                dgvPesanan.Rows[pos].Cells[3].Value = numJumlah.Value.ToString();
-                dgvPesanan.Rows[pos].Cells[4].Value = _harga.ToString();
-                dgvPesanan.Rows[pos].Cells[5].Value = _total.ToString();
+                AddItem();
             }
 
+            CalculateTotals();
+        }
+
+        private void CalculateTotals()
+        {
             long _totalBayar = 0;
             long _totalItem = 0;
 
             foreach (DataGridViewRow row in dgvPesanan.Rows)
             {
-                _totalItem += Convert.ToInt64(row.Cells[1]);
-                _totalBayar += Convert.ToInt64(row.Cells[5]);
+                _totalItem += Convert.ToInt64(row.Cells[3].Value.ToString());
+                _totalBayar += Convert.ToInt64(row.Cells[5].Value.ToString());
             }
 
             lblBayar.Text = _totalBayar.ToString();
             lblItem.Text = _totalItem.ToString();
         }
 
+        private void editItem(int position)
+        {
+            dgvPesanan.Rows[position].Cells[3].Value = numJumlah.Value.ToString();
+            dgvPesanan.Rows[position].Cells[5].Value = _total.ToString();
+        }
+
+        private void AddItem()
+        {
+            int pos = dgvPesanan.Rows.Count;
+
+            dgvPesanan.Rows.Add();
+            dgvPesanan.Rows[pos].Cells[0].Value = pos + 1;
+            dgvPesanan.Rows[pos].Cells[1].Value = cbPilihan.Text;
+            dgvPesanan.Rows[pos].Cells[2].Value = cbJenis.Text;
+            dgvPesanan.Rows[pos].Cells[3].Value = numJumlah.Value.ToString();
+            dgvPesanan.Rows[pos].Cells[4].Value = _harga.ToString();
+            dgvPesanan.Rows[pos].Cells[5].Value = _total.ToString();
+        }
+
         private void btnBatal_Click(object sender, EventArgs e)
         {
             dgvPesanan.Rows.Clear();
+            txtHarga.Clear();
+            lblBayar.Text = "0";
+            lblItem.Text = "0";
         }
     }
 }

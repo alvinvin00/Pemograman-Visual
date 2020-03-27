@@ -7,3 +7,18 @@ D:\Pemograman Visual\Kawal Corona\obj\Debug\Kawal_Corona.Properties.Resources.re
 D:\Pemograman Visual\Kawal Corona\obj\Debug\Kawal Corona.csproj.GenerateResource.cache
 D:\Pemograman Visual\Kawal Corona\obj\Debug\Kawal Corona.exe
 D:\Pemograman Visual\Kawal Corona\obj\Debug\Kawal Corona.pdb
+D:\Pemograman Visual\Kawal Corona\bin\Debug\EntityFramework.dll
+D:\Pemograman Visual\Kawal Corona\bin\Debug\EntityFramework.SqlServer.dll
+D:\Pemograman Visual\Kawal Corona\bin\Debug\GMap.NET.Core.dll
+D:\Pemograman Visual\Kawal Corona\bin\Debug\GMap.NET.WindowsForms.dll
+D:\Pemograman Visual\Kawal Corona\bin\Debug\GMap.NET.WindowsPresentation.dll
+D:\Pemograman Visual\Kawal Corona\bin\Debug\Newtonsoft.Json.dll
+D:\Pemograman Visual\Kawal Corona\bin\Debug\System.Data.SQLite.dll
+D:\Pemograman Visual\Kawal Corona\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Pemograman Visual\Kawal Corona\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Pemograman Visual\Kawal Corona\bin\Debug\EntityFramework.xml
+D:\Pemograman Visual\Kawal Corona\bin\Debug\EntityFramework.SqlServer.xml
+D:\Pemograman Visual\Kawal Corona\bin\Debug\Newtonsoft.Json.xml
+D:\Pemograman Visual\Kawal Corona\bin\Debug\System.Data.SQLite.xml
+D:\Pemograman Visual\Kawal Corona\bin\Debug\System.Data.SQLite.dll.config
+D:\Pemograman Visual\Kawal Corona\obj\Debug\Kawal Corona.csproj.CopyComplete

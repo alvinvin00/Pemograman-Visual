@@ -10,6 +10,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Http.Headers;
 using System.Web.Script.Serialization;
+using GMap.NET;
+using GMap.NET.MapProviders;
+using GMap.NET.WindowsForms;
+using GMap.NET.WindowsForms.Markers;
 
 namespace Kawal_Corona
 {
@@ -21,8 +25,7 @@ namespace Kawal_Corona
         {
             String url = "https://api.kawalcorona.com/";
 
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri(url);
+            HttpClient client = new HttpClient {BaseAddress = new Uri(url)};
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -53,6 +56,8 @@ namespace Kawal_Corona
         {
             listValueData = await getAllDataCOVID19();
 
+            getAllCovidMap();
+
             if (listValueData.Count > 0)
             {
                 for (int i = 0; i < listValueData.Count; i++)
@@ -82,9 +87,10 @@ namespace Kawal_Corona
                         String Recovered = "Recovered : " + covid19.Recovered;
                         String Active = "Active : " + covid19.Active;
 
-                        StringFormat SF = new StringFormat();
-                        SF.Alignment = StringAlignment.Center;
-                        SF.LineAlignment = StringAlignment.Center;
+                        StringFormat SF = new StringFormat
+                        {
+                            Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center
+                        };
                         Rectangle RC = btnData.ClientRectangle;
 
                         Font courier = new Font("MS Courier", 9.0F, FontStyle.Regular);
@@ -118,11 +124,96 @@ namespace Kawal_Corona
             Button btnData = sender as Button;
             ValueData valueData = listValueData[btnData.TabIndex];
 
-            StringBuilder queryAddress = new StringBuilder();
-            queryAddress.Append("https://www.google.com/maps/@");
-            queryAddress.Append(valueData.attributes.Lat.ToString().Replace(",", ".") + "," +
-                                valueData.attributes.Long_.ToString().Replace(",", ".") + ",5z");
-            System.Diagnostics.Process.Start(queryAddress.ToString());
+            // StringBuilder queryAddress = new StringBuilder();
+            // queryAddress.Append("https://www.google.com/maps/@");
+            // queryAddress.Append(valueData.attributes.Lat.ToString().Replace(",", ".") + "," +
+            //                     valueData.attributes.Long_.ToString().Replace(",", ".") + ",5z");
+            // System.Diagnostics.Process.Start(queryAddress.ToString());
+
+            Covid19 covid19 = valueData.attributes;
+
+            double lat = covid19.Lat;
+            double lng = covid19.Long_;
+
+            gMapControlCovid.Overlays.Clear();
+            GMaps.Instance.Mode = AccessMode.ServerAndCache;
+            gMapControlCovid.CacheLocation = @"cache";
+            gMapControlCovid.DragButton = MouseButtons.Right;
+            gMapControlCovid.ShowCenter = false;
+            gMapControlCovid.MapProvider = GMapProviders.GoogleMap;
+            gMapControlCovid.Position = new PointLatLng(lat, lng);
+            gMapControlCovid.MinZoom = 0;
+            gMapControlCovid.MaxZoom = 18;
+            gMapControlCovid.Zoom = 5;
+
+            GMapOverlay markers = new GMapOverlay("markers");
+            GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(lat, lng), GMarkerGoogleType.red_dot);
+            String name = String.Format("{0} \n" +
+                                        "Confirmed : {1}\n" +
+                                        "Deaths : {2}\n" +
+                                        "Recovered : {3}\n" +
+                                        "Active : {4}\n" +
+                                        "Lat, Lng : {5},{6}", covid19.Country_Region,
+                covid19.Confirmed, covid19.Deaths, covid19.Recovered,
+                covid19.Active, lat, lng);
+            marker.ToolTip = new GMapToolTip(marker);
+            marker.ToolTipText = name;
+            marker.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+            markers.Markers.Add(marker);
+            gMapControlCovid.Overlays.Add(markers);
+        }
+
+        private void getAllCovidMap()
+        {
+            GMaps.Instance.Mode = AccessMode.ServerAndCache;
+            gMapControlCovid.CacheLocation = @"cache";
+            gMapControlCovid.DragButton = MouseButtons.Right;
+            gMapControlCovid.ShowCenter = false;
+            gMapControlCovid.MapProvider = GMapProviders.GoogleMap;
+            gMapControlCovid.Position = new PointLatLng(0, 0);
+
+            gMapControlCovid.Overlays.Clear();
+
+            for (int i = 0; i < listValueData.Count; i++)
+            {
+                Covid19 covid19 = listValueData[i].attributes;
+
+                double lat = covid19.Lat;
+                double lng = covid19.Long_;
+
+
+                GMapOverlay markers = new GMapOverlay("markers");
+                GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(lat, lng), GMarkerGoogleType.red_dot);
+                String name = String.Format("{0} \n" +
+                                            "Confirmed : {1}\n" +
+                                            "Deaths : {2}\n" +
+                                            "Recovered : {3}\n" +
+                                            "Active : {4}\n" +
+                                            "Lat, Lng : {5},{6}", covid19.Country_Region,
+                    covid19.Confirmed, covid19.Deaths, covid19.Recovered,
+                    covid19.Active, lat, lng);
+                marker.ToolTip = new GMapToolTip(marker);
+                marker.ToolTipText = name;
+                marker.ToolTipMode = MarkerTooltipMode.OnMouseOver;
+                markers.Markers.Add(marker);
+                gMapControlCovid.Overlays.Add(markers);
+            }
+
+            gMapControlCovid.MinZoom = 0;
+            gMapControlCovid.MaxZoom = 18;
+            gMapControlCovid.Zoom = 2;
+            gMapControlCovid.Zoom--;
+            gMapControlCovid.Zoom++;
+        }
+
+        private void btnShowAll_Click(object sender, EventArgs e)
+        {
+            getAllCovidMap();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -1,0 +1,9 @@
+D:\Pemograman Visual\Post Rank\obj\Debug\Post Rank.csprojAssemblyReference.cache
+D:\Pemograman Visual\Post Rank\obj\Debug\Post_Rank.FrmMenuUtama.resources
+D:\Pemograman Visual\Post Rank\obj\Debug\Post_Rank.Properties.Resources.resources
+D:\Pemograman Visual\Post Rank\obj\Debug\Post Rank.csproj.GenerateResource.cache
+D:\Pemograman Visual\Post Rank\bin\Debug\Post Rank.exe.config
+D:\Pemograman Visual\Post Rank\bin\Debug\Post Rank.exe
+D:\Pemograman Visual\Post Rank\bin\Debug\Post Rank.pdb
+D:\Pemograman Visual\Post Rank\obj\Debug\Post Rank.exe
+D:\Pemograman Visual\Post Rank\obj\Debug\Post Rank.pdb

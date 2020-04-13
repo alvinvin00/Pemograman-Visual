@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Alvin\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Alvin\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Post Rank.-1029400167.00" t="ExcludeRecursive" />
+    <e p="D:\Pemograman Visual\Post Rank" t="IncludeRecursive">
+      <e p="App.config" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="FrmMenuUtama.cs" t="Include" />
+      <e p="FrmMenuUtama.Designer.cs" t="Include" />
+      <e p="FrmMenuUtama.resx" t="Include" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Post Rank.csproj" t="IncludeRecursive" />
+      <e p="Post Rank.sln" t="IncludeFlat" />
+      <e p="PostRank.cs" t="Include" />
+      <e p="Program.cs" t="Include" />
+      <e p="Properties" t="Include">
+        <e p="AssemblyInfo.cs" t="Include" />
+        <e p="Resources.Designer.cs" t="Include" />
+        <e p="Resources.resx" t="Include" />
+        <e p="Settings.Designer.cs" t="Include" />
+        <e p="Settings.settings" t="Include" />
+      </e>
+      <e p="Utility.cs" t="Include" />
+      <e p="ValueData.cs" t="Include" />
+      <e p="ValueNoData.cs" t="Include" />
+    </e>
+  </component>
+</project>

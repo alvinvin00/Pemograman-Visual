@@ -1,0 +1,10 @@
+D:\Pemograman Visual\UTS_1822250016_Alvin Leonardo\bin\Debug\UTS_1822250016_Alvin Leonardo.exe.config
+D:\Pemograman Visual\UTS_1822250016_Alvin Leonardo\bin\Debug\UTS_1822250016_Alvin Leonardo.exe
+D:\Pemograman Visual\UTS_1822250016_Alvin Leonardo\bin\Debug\UTS_1822250016_Alvin Leonardo.pdb
+D:\Pemograman Visual\UTS_1822250016_Alvin Leonardo\obj\Debug\UTS_1822250016_Alvin Leonardo.csprojAssemblyReference.cache
+D:\Pemograman Visual\UTS_1822250016_Alvin Leonardo\obj\Debug\UTS_1822250016_Alvin_Leonardo.FrmMenuUtama.resources
+D:\Pemograman Visual\UTS_1822250016_Alvin Leonardo\obj\Debug\UTS_1822250016_Alvin_Leonardo.Properties.Resources.resources
+D:\Pemograman Visual\UTS_1822250016_Alvin Leonardo\obj\Debug\UTS_1822250016_Alvin Leonardo.csproj.GenerateResource.cache
+D:\Pemograman Visual\UTS_1822250016_Alvin Leonardo\obj\Debug\UTS_1822250016_Alvin Leonardo.csproj.CoreCompileInputs.cache
+D:\Pemograman Visual\UTS_1822250016_Alvin Leonardo\obj\Debug\UTS_1822250016_Alvin Leonardo.exe
+D:\Pemograman Visual\UTS_1822250016_Alvin Leonardo\obj\Debug\UTS_1822250016_Alvin Leonardo.pdb

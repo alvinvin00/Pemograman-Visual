@@ -16,7 +16,7 @@ namespace AplikasiToko
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMasterUser());
+            Application.Run(new FrmLogin());
         }
     }
 }

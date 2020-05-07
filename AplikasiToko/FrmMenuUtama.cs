@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AplikasiToko
@@ -21,10 +14,33 @@ namespace AplikasiToko
 
         private void FrmMenuUtama_Load(object sender, EventArgs e)
         {
-            if (koneksi.openConnection())
-            {
-                this.Text = "Koneksi Database Sukses!";
-            }
+            // if (koneksi.openConnection())
+            // {
+            //     this.Text = "Koneksi Database Sukses!";
+            // }
+        }
+
+        private void masterUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmMasterUser frmMasterUser = new FrmMasterUser {MdiParent = this};
+            frmMasterUser.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmLogin frmLogin = new FrmLogin();
+            frmLogin.Show();
+        }
+
+        private void FrmMenuUtama_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

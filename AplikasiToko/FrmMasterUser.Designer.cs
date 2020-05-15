@@ -52,6 +52,7 @@
             this.btnCari = new System.Windows.Forms.Button();
             this.txtCari = new System.Windows.Forms.TextBox();
             this.btnHapus = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
             this.panelStatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.SuspendLayout();
@@ -89,6 +90,7 @@
             // 
             // btnRefresh
             // 
+            this.btnRefresh.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnRefresh.Location = new System.Drawing.Point(189, 187);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 23);
@@ -98,6 +100,7 @@
             // 
             // btnSimpan
             // 
+            this.btnSimpan.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnSimpan.Location = new System.Drawing.Point(96, 187);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(75, 23);
@@ -186,7 +189,8 @@
             // 
             this.dgvUser.AllowUserToAddRows = false;
             this.dgvUser.AllowUserToDeleteRows = false;
-            this.dgvUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -276,13 +280,25 @@
             // 
             // btnHapus
             // 
+            this.btnHapus.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnHapus.Location = new System.Drawing.Point(96, 216);
             this.btnHapus.Name = "btnHapus";
-            this.btnHapus.Size = new System.Drawing.Size(168, 23);
+            this.btnHapus.Size = new System.Drawing.Size(75, 23);
             this.btnHapus.TabIndex = 30;
             this.btnHapus.Text = "Hapus";
             this.btnHapus.UseVisualStyleBackColor = true;
             this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
+            // 
+            // btnExport
+            // 
+            this.btnExport.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnExport.Location = new System.Drawing.Point(189, 216);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(75, 23);
+            this.btnExport.TabIndex = 31;
+            this.btnExport.Text = "Export";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // FrmMasterUser
             // 
@@ -290,6 +306,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 247);
+            this.Controls.Add(this.btnExport);
             this.Controls.Add(this.btnHapus);
             this.Controls.Add(this.txtCari);
             this.Controls.Add(this.btnCari);
@@ -346,5 +363,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
 
         #endregion
+
+        private System.Windows.Forms.Button btnExport;
     }
 }

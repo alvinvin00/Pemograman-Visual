@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Windows.Forms;
+using Microsoft.Office.Interop.Excel;
 
 namespace AplikasiToko
 {
@@ -44,8 +45,7 @@ namespace AplikasiToko
 
                 koneksi.cmd = new MySqlCommand(query, koneksi.connection);
 
-                koneksi.da = new MySqlDataAdapter();
-                koneksi.da.SelectCommand = koneksi.cmd;
+                koneksi.da = new MySqlDataAdapter {SelectCommand = koneksi.cmd};
 
                 koneksi.ds = new DataSet();
 
@@ -156,7 +156,7 @@ namespace AplikasiToko
 
         private void txtUserId_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter)
+            if (e.KeyChar == (char) Keys.Enter)
             {
                 if (txtUserId.Text.Trim().Length == 0)
                 {
@@ -320,8 +320,7 @@ namespace AplikasiToko
                     String.Format("SELECT * from users WHERE user_id LIKE '%{0}%' OR user_name LIKE '%{0}%'",
                         txtCari.Text);
                 koneksi.cmd = new MySqlCommand(query, koneksi.connection);
-                koneksi.da = new MySqlDataAdapter();
-                koneksi.da.SelectCommand = koneksi.cmd;
+                koneksi.da = new MySqlDataAdapter {SelectCommand = koneksi.cmd};
                 koneksi.ds = new DataSet();
                 koneksi.da.Fill(koneksi.ds, "cariuser");
 
@@ -362,6 +361,31 @@ namespace AplikasiToko
                     koneksi.closeConnection();
                     MessageBox.Show("Delete Data Success!");
                     bersih();
+                }
+            }
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            _Application app = new Microsoft.Office.Interop.Excel.Application();
+            _Workbook workbook = app.Workbooks.Add(Type.Missing);
+            _Worksheet worksheet = null;
+
+            app.Visible = true;
+            worksheet = workbook.Sheets["Sheet1"];
+            worksheet = workbook.ActiveSheet;
+            worksheet.Name = "Data User";
+
+            for (int i = 1; i < dgvUser.ColumnCount + 1; i++)
+            {
+                worksheet.Cells[1, i] = dgvUser.Columns[i - 1].HeaderText;
+            }
+
+            for (int i = 0; i < dgvUser.RowCount ; i++)
+            {
+                for (int j = 0; j < dgvUser.ColumnCount; j++)
+                {
+                    worksheet.Cells[i + 2, j + 1] = dgvUser.Rows[i].Cells[j].Value.ToString();
                 }
             }
         }

@@ -42,5 +42,12 @@ namespace AplikasiToko
         {
             Application.Exit();
         }
+
+        private void laporanUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmLaporanUser frmLaporanUser=new FrmLaporanUser();
+            frmLaporanUser.MdiParent = this;
+            frmLaporanUser.Show();
+        }
     }
 }

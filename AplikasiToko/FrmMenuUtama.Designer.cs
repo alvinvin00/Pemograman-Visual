@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.masterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.masterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.masterUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.laporanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.laporanUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -44,12 +46,51 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.masterToolStripMenuItem});
+            this.masterToolStripMenuItem,
+            this.laporanToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.logoutToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // masterToolStripMenuItem
+            // 
+            this.masterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.masterUserToolStripMenuItem});
+            this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
+            this.masterToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.masterToolStripMenuItem.Text = "Master";
+            // 
+            // masterUserToolStripMenuItem
+            // 
+            this.masterUserToolStripMenuItem.Name = "masterUserToolStripMenuItem";
+            this.masterUserToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.masterUserToolStripMenuItem.Text = "Master User";
+            this.masterUserToolStripMenuItem.Click += new System.EventHandler(this.masterUserToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -61,49 +102,26 @@
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.logoutToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // masterToolStripMenuItem
-            // 
-            this.masterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.masterUserToolStripMenuItem});
-            this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
-            this.masterToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.masterToolStripMenuItem.Text = "Master";
-            // 
-            // logoutToolStripMenuItem
-            // 
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.logoutToolStripMenuItem.Text = "Logout";
-            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // masterUserToolStripMenuItem
-            // 
-            this.masterUserToolStripMenuItem.Name = "masterUserToolStripMenuItem";
-            this.masterUserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.masterUserToolStripMenuItem.Text = "Master User";
-            this.masterUserToolStripMenuItem.Click += new System.EventHandler(this.masterUserToolStripMenuItem_Click);
-            // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(97, 17);
             this.toolStripStatusLabel1.Text = "Apikasi Toko v1.0";
+            // 
+            // laporanToolStripMenuItem
+            // 
+            this.laporanToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.laporanUserToolStripMenuItem});
+            this.laporanToolStripMenuItem.Name = "laporanToolStripMenuItem";
+            this.laporanToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.laporanToolStripMenuItem.Text = "Laporan";
+            // 
+            // laporanUserToolStripMenuItem
+            // 
+            this.laporanUserToolStripMenuItem.Name = "laporanUserToolStripMenuItem";
+            this.laporanUserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.laporanUserToolStripMenuItem.Text = "Laporan User";
+            this.laporanUserToolStripMenuItem.Click += new System.EventHandler(this.laporanUserToolStripMenuItem_Click);
             // 
             // FrmMenuUtama
             // 
@@ -137,6 +155,8 @@
         private System.Windows.Forms.ToolStripMenuItem masterUserToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripMenuItem laporanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem laporanUserToolStripMenuItem;
     }
 }
 
